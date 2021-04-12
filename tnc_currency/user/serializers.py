@@ -40,7 +40,7 @@ class UserSerializer(serializers.ModelSerializer):
         return user
 
     def validate(self, attrs):
-        """validates and authenticates user"""
+        """validates new user data"""
         email = attrs.get('email')
         password = attrs.get('password')
         retype_password = attrs.pop('retype_password')
